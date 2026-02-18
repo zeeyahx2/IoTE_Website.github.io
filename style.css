@@ -1,16 +1,72 @@
 /* // tab-bar */
+.logo{
+    margin: 0;
+}
+
+.logodeptabbar{
+    width: 200px;
+    height: auto;
+}
+
+.topbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
 .tab-container{
-display: flex;             /* จัดให้เรียงแนวนอน */
-    justify-content: right;   /* จัดให้อยู่ตรงกลาง (ถ้าชอบชิดซ้ายให้ลบออก) */
-    margin-top: 32px;
-    margin-right: 30px;
-    margin-bottom: 20px;
-    gap: 22px;
+    display: flex;
+    width: fit-content;
+    margin: 10px 10px 10px auto;
+    gap: 25px;
+    background-color: #F3E6A2;
+    border-radius: 33px;
+    padding: 10px 15px;
 }
 
 .tab-link{
     text-decoration: none;
+    display: flex;
+    align-items: center;
     color: #184274;
-    padding: 10px 20px ;
+    padding: 10px 15px ;
     background-color: #78C0E6;
+    border-radius: 30px;
+    transition: all 0.5s ease;
+}
+
+
+.tab-link .icon{
+    width: 20px;
+    height: 20px;
+    display: block;
+}
+
+.tab-link .label{
+    display: inline-block;
+    max-width: 0;
+    overflow: hidden;
+    opacity: 0;
+    white-space: nowrap;
+    transition: all 0.4s ease;
+    font-weight: bold;
+    margin-left: 0;
+}
+
+.tab-link.active{
+    background-color: #78C0E6;
+    color: #184274;
+    transform: scale(0.95); /*ปุ่มยุบลงเล็ฏน้อย*/
+}
+
+.tab-link:hover{
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.tab-link.active .label{
+    display: inline-block;
+    max-width: 150px;
+    opacity: 1;
+    margin-left: 10px;
 }
