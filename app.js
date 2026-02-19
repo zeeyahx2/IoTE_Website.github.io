@@ -33,6 +33,8 @@ window.addEventListener("load", () => {
     if (activeTab) {
         moveIndicator(activeTab);
     }
+    menu.classList.remove("active");
+    hamburger.classList.remove("active")
 });
 
 window.addEventListener("resize", () => {

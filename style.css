@@ -1,3 +1,11 @@
+@font-face {
+  font-family: 'Kodchasan';
+  src: url('./font/Kodchasan-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+
 /* // tab-bar */
 .logo{
     margin: 0;
@@ -21,7 +29,6 @@
     left: 10px;
     width: 80px;
     height: 40px;
-    background-color: #78C0E6;
     border-radius: 30px;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2,1);
 }
@@ -39,6 +46,7 @@
 }
 
 .tab-link{
+    font-family: 'Kodchasan', sans-serif;
     position: relative;
     z-index: 1;
     text-decoration: none;
@@ -70,7 +78,7 @@
 
 .tab-link.active{
     color: #184274;
-        background-color: #78C0E6;
+    background-color: #78C0E6;
     opacity: 1;
     animation: pop 0.3s ease;
 }
@@ -114,25 +122,48 @@
 }
 
 @media (max-width: 768px){
+    .indicator{
+        display: none;
+    }
 
     .hamburger{
         display: flex;
-        z-index: 1001;
+        z-index: 2000;
     }
 
+    /* .hamburger.active{
+        display: none;
+    } */
+
+    .tab-link{
+        background: transparent;
+        opacity: 1;
+        width: 125px;
+        justify-content: flex-start;
+    }
+    .tab-link.active{
+        width: 125px;
+        color: #184274;
+        background-color: #78C0E6;
+        opacity: 1;
+        animation: pop 0.3s ease;
+    }
     .tab-container{
         position: absolute;
-        top: 70px;
-        right: 10px;
+        top: 65px;
+        right: -280px;
+        height: fit-content;
+        width: 150px;
         flex-direction: column;
         background-color: #F3E6A2;
         padding: 20px;
         border-radius: 20px;
-
         transform: translateX(120%);
-        transition: transform 0.4s ease;
+        transition: transform 0.35s ease;
+        z-index: 1500;
     }
     .tab-container.active{
         transform: translateX(0);
+        right: 0px;
     }
 }
