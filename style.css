@@ -45,7 +45,6 @@
     display: flex;
     align-items: center;
     color: #184274;
-    background-color: #78C0E6;
     padding: 10px 15px ;
     border-radius: 30px;
     transition: all 0.4s ease;
@@ -71,6 +70,7 @@
 
 .tab-link.active{
     color: #184274;
+        background-color: #78C0E6;
     opacity: 1;
     animation: pop 0.3s ease;
 }
@@ -117,6 +117,7 @@
 
     .hamburger{
         display: flex;
+        z-index: 1001;
     }
 
     .tab-container{
