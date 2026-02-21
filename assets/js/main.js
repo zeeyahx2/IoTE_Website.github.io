@@ -1,4 +1,3 @@
-console.log("app.js loaded!")
 // tabbar
 const tabs = document.querySelectorAll(".tab-link");
 const indicator = document.querySelector(".indicator")
@@ -16,7 +15,6 @@ function moveIndicator(element) {
 
 tabs.forEach(tab => {
     tab.addEventListener("click", function (e) {
-        e.preventDefault();
 
         tabs.forEach(t => t.classList.remove("active"));
         this.classList.add("active");
@@ -24,7 +22,7 @@ tabs.forEach(tab => {
 
         // ปิดมือถืออัตโน
         menu.classList.remove("active");
-        hamburger.classList.remove("open");
+        hamburger.classList.remove("active");
     });
 });
 

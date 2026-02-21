@@ -1,0 +1,156 @@
+/* tab-bar */
+.logo{ margin: 0; }
+
+.logodeptabbar{
+  width: 200px;
+  height: auto;
+}
+
+.topbar{
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.indicator{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 80px;
+  height: 40px;
+  border-radius: 30px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2,1);
+}
+
+.tab-container{
+  position: relative;
+  display: flex;
+  width: fit-content;
+  margin: 10px 10px 10px auto;
+  gap: 25px;
+  background-color: #F3E6A2;
+  border-radius: 33px;
+  padding: 10px 15px;
+  z-index: 999;
+}
+
+.tab-link{
+  font-family: 'Kodchasan', sans-serif;
+  position: relative;
+  z-index: 1;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: #184274;
+  padding: 10px 15px ;
+  border-radius: 30px;
+  transition: all 0.4s ease;
+  opacity: 0.6;
+}
+
+.tab-link .icon{
+  width: 20px;
+  height: 20px;
+  display: block;
+}
+
+.tab-link .label{
+  max-width: 0;
+  overflow: hidden;
+  opacity: 0;
+  white-space: nowrap;
+  transition: all 0.4s ease;
+  font-weight: bold;
+  margin-left: 0;
+}
+
+.tab-link.active{
+  color: #184274;
+  background-color: #78C0E6;
+  opacity: 1;
+  animation: pop 0.3s ease;
+}
+
+@keyframes pop{
+  0%{ transform: scale(0.9); }
+  50%{ transform: scale(1.05); }
+  100%{ transform: scale(1); }
+}
+
+.tab-link:hover{
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.tab-link.active .label{
+  display: inline-block;
+  max-width: 150px;
+  opacity: 1;
+  margin-left: 10px;
+}
+
+.hamburger{
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 6px;
+}
+
+.hamburger span{
+  width: 40px;
+  height: 4px;
+  background-color: #F3E6A2;
+  border-radius: 5px;
+  transition: all 0.4s ease;
+}
+
+/* footer */
+.footer{
+    font-family: 'K2D', sans-serif;
+}
+
+.footer-inner{
+    display: flex;
+    justify-content: space-between; /*left-right*/
+    align-items: flex-start;
+    flex-wrap: wrap;
+    background-color: #040518;
+    color: #F3E6A2;
+    gap: 10px;
+    padding: 40px;
+}
+
+.footer-logo-img{
+    width: 200px;
+    height: auto;
+    margin: 0;
+}
+
+
+.footer-contact p{
+    margin: 6px 0; /*ระยะห่างบรรทัด*/
+    line-height: 1.6; /*ค.สูงบรรทัด*/
+}
+
+.footer-address p{
+    margin: 6px 0; /*ระยะห่างบรรทัด*/
+    line-height: 1.6; /*ค.สูงบรรทัด*/
+}
+
+.social{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 12px;
+}
+
+.footer-bottom{
+    display: flex;
+    color: #040518;
+    background-color: #F3E6A2;
+    justify-content: center;
+    padding: 12px 16px;
+    text-align: center;
+}
