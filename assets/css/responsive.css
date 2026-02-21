@@ -50,4 +50,25 @@
     pointer-events: auto;
   }
 
+  /* footer */
+  .footer-logo{
+    width: 160px;
+    margin-left: 0;
+  }
+  .footer-row{
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .footer-col,.footer-contact,.footer-address{
+    flex: none;
+    width: 100%; /*ให้เต็ม*/
+  }
+
+  .social{
+    flex-direction: row; /*เรียงแนวนอน*/
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+  }
 }
